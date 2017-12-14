@@ -30,7 +30,7 @@
 	echo "<th>Sex</th>";
 	echo "<th>Grade</th>";
 	echo "</tr>";
-	while($row = ) { //get the data returned by the SQL query and put it in an array for use in PHP
+	while($row = mysqli_fetch_assoc($rosterResult)) { //get the data returned by the SQL query and put it in an array for use in PHP
 		echo "<tr>";
 		echo "<td>" . $row["firstname"] . "</td>";
 		echo "<td>" . $row["lastname"] . "</td>";
