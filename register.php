@@ -9,7 +9,7 @@
 	//connect to the SQL database
 	$con = mysqli_connect("integrity", "techhound", "team868!", "techhound"); //This is BAD PRACTICE! Don't do this on a real website! Read the credentials from a file instead!
 	if(mysqli_connect_errno($con)) {
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		echo "Failed to connect to MySQL: " . mysqli_connect_error(); //error checking is important in PHP so the user can get feedback on whether they were successful
 	}
 	
 	//insert new student information into database	
@@ -17,12 +17,14 @@
 	
 	mysqli_query($con, $statement);
 	
+	//Inform the user they were successful so they don't email you and ask!
 	echo "Congratulations! You have been registered successfully.";
 	
 	//display full roster
 	$rosterStatement = "SELECT * FROM members";
 	$rosterResult = mysqli_query($con, $rosterStatement);
 	
+	//You can echo HTML code to a web page from PHP, and the HTML will be rendered properly by the client's browser.
 	echo "<br /><br />";
 	echo "<table>";
 	echo "<tr>";
