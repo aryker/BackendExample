@@ -23,6 +23,7 @@
 	$rosterStatement = "SELECT * FROM members";
 	$rosterResult = mysqli_query($con, $rosterStatement);
 	
+	echo "<br /><br />";
 	echo "<table>";
 	echo "<tr>";
 	echo "<th>First Name</th>";
