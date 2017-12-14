@@ -7,7 +7,7 @@
 	$grade = $_POST["grade"];
 	
 	//connect to the SQL database
-	$con = mysqli_connect("localhost", "techhound", "team868!", "techhound");
+	$con = mysqli_connect("integrity", "techhound", "team868!", "techhound");
 	if(mysqli_connect_errno($con)) {
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
