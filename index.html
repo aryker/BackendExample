@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Team Registration</title>
+		<h1>Team Registration</h1>
+	</head>
+	
+	<body>
+		<h3>To register for the team, please fill out the following form.</h3>
+		
+		<form action="register.php" method="post"> <!-- Create a web form that expects a file in the same directory called register.php to process the data. -->
+												   <!-- The POST method is used here to transmit the form data to the server. This means that no one can see the data as
+														it is sent to the server. -->
+
+			<!-- Collect the student's first and last name. -->
+			<input type="text" name="firstname"> <br />			
+			<input type="text" name="lastname"><br />
+			<br />
+			
+			<!-- Collect the student's sex. -->
+			<input type="radio" name="sex" value="male"> Male <br />
+			<input type="radio" name="sex" value="female"> Female <br />
+			<br />
+			
+			<!-- Collect the student's grade. -->
+			<input type="radio" name="grade" value="1"> Freshman <br />
+			<input type="radio" name="grade" value="2"> Sophomore <br />
+			<input type="radio" name="grade" value="3"> Junior <br />
+			<input type="radio" name="grade" value="4"> Senior <br />
+			<br />
+			
+			<!-- Create a 'Submit' button that the user will click to submit their answers. -->
+			<input type="submit" value="Submit">
+			
+		</form>
+	</body>
+</html>
