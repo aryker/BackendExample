@@ -19,6 +19,27 @@
 	
 	echo "Congratulations! You have been registered successfully.";
 	
+	//display full roster
+	$rosterStatement = "SELECT * FROM members";
+	$rosterResult = mysqli_query($con, $rosterStatement);
+	
+	echo "<table>";
+	echo "<tr>";
+	echo "<th>First Name</th>";
+	echo "<th>Last Name</th>";
+	echo "<th>Sex</th>";
+	echo "<th>Grade</th>";
+	echo "</tr>";
+	while($row = ) { //get the data returned by the SQL query and put it in an array for use in PHP
+		echo "<tr>";
+		echo "<td>" . $row["firstname"] . "</td>";
+		echo "<td>" . $row["lastname"] . "</td>";
+		echo "<td>" . $row["sex"] . "</td>";
+		echo "<td>" . $row["grade"] . "</td>";
+		echo "</tr>";
+	}
+	echo "</table>";
+	
 	//close the SQL connection
 	mysqli_close($con);
 
