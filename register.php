@@ -8,6 +8,9 @@
 	
 	//connect to the SQL database
 	$con = mysqli_connect("localhost", "techhound", "team868!", "techhound");
+	if(mysqli_connect_errno($con)) {
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
 	
 	//insert new student information into database	
 	$statement = "INSERT INTO members (firstname, lastname, sex, grade) VALUES (\"" . $firstname . "\", \"" . $lastname . "\", " . substr($sex, 1) . ", " . $grade . ")";
